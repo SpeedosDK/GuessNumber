@@ -1,15 +1,21 @@
+import java.util.Locale;
 import java.util.Scanner;
 public class GuessNumber
 {
     public static void main(String[] args)
     {
-        Scanner difficultyInput = new Scanner(System.in);
+        runProgram(); // kører vores program
+    }
 
-        //velkommenMsg();
+    public static void runProgram()
+    {
+        welcomeMsg(); // udskriver velkomstbeskeden
 
-        int difficulty = difficultyInput.nextInt();
-        //chooseDifficulty(difficulty);
+        // bruger det tilfældige fra chooseDifficulty, sender det til checkGuess og modtager
+        // input fra brugeren og tjekker om det er for højt, lavt eller rigtigt
+        checkGuess(chooseDifficulty());
 
+        handlePlayAgain(); // spørger om brugeren vil spille igen, og hvis sandt, spiller spillet igen
     }
 
     public static void checkGuess( int number)
@@ -33,15 +39,7 @@ public class GuessNumber
         }
     }
 
-    public static  void chooseDifficulty(int diff)
-    {
-        if (diff == 1)
-        {
-
-        }
-    }
-
-    public static void randomNumberGen()
+    public static int randomNumberGen(int maksTal)
     {
 
     }
